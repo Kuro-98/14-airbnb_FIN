@@ -19,6 +19,8 @@
 		padding: 1rem 2rem;
 		display: flex;
 		flex-direction: column;
+		transition-property: background-color, border-radius, box-shadow;
+		transition-duration: 0.3s;
 		&:nth-child(1) {
 			@include m.desktop {
 				padding-left: 4rem;
