@@ -8,13 +8,10 @@
 	padding: 5rem;
 	color: v.$blanco;
 	background-image: linear-gradient(to bottom, v.$negro 0%, v.$negro 50%, transparent 50%), url(../img/anfitrion.jpg);
-	background-size: 100%, 60rem;
+	background-size: 100%, 63rem;
 	background-repeat: no-repeat;
 	background-position: center, center bottom;
-	@include m.telefono {
-		background-size: 100%, 70rem;
-		background-position: center, center 200%;
-	}
+	border-radius: 1.5rem;
 	@include m.tablet {
 		grid-template-rows: unset;
 		background-image: linear-gradient(to right, v.$negro 0%, v.$negro 45%, transparent 55%),
@@ -29,13 +26,19 @@
 	}
 
 	&__contenido {
-	}
-	&__heading {
+		@include m.tablet {
+			max-width: 50%;
+		}
 	}
 
 	&__texto {
+		color: v.$blanco;
 	}
 
 	&__enlace {
+		@include m.boton(v.$blanco, v.$negro);
+		border-radius: 1rem;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
 	}
 }
